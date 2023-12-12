@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: Customer
+    database: FDN_INGEST_DEV
+    schema: SAP_G9
+    tables:
+      - name: KNA1
+      - name: T005T
+      - name: ADRC
+      - name: ADR6
+      
+      - name: T002T
+      - name: TVLST
+      - name: TVFST
+      - name: TVAST
+      - name: TKUKT
+      - name: T005U
+      - name: KNVP
+      - name: ADRT
+  - name: cust
+    database: DBT_SANDBOX
+    schema: DBT_RKUMAR
+    tables:
+      - name: cust_sn
+    description: "{{doc('table_events')}}"
